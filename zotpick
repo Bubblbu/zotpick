@@ -9,6 +9,7 @@ if [ "$BBT_status" == "ready" ] 2>/dev/null; then
 		notify-send "Accessing Zotero picker..."
 		citation=$(/usr/bin/curl $CAYW_URL 2>/dev/null)
 		echo $citation | xclip -sel clip 
+		notify-send "Copied the selected citekey."
 		exit 0;
 
 elif [ -z "$BBT_status" ]; then
